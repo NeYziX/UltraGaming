@@ -6,9 +6,9 @@ var prefix = (":");
 bot.on('ready', function() {
   bot.user.setGame(":help | Dev By NeYziX");
   console.log("le bot a démarré"); 
-  bot.channels.get('441785759804948482').send("**=======================**");
-  bot.channels.get('441785759804948482').send("| LE BOT VIENT DE SE LANCER |");
-  bot.channels.get('441785759804948482').send("**=======================**");
+  bot.channels.get('442630188136660992').send("**=======================**");
+  bot.channels.get('442630188136660992').send("| LE BOT VIENT DE SE LANCER |");
+  bot.channels.get('442630188136660992').send("**=======================**");
 });
 
 bot.login(process.env.BOT_TOKEN);
@@ -86,7 +86,7 @@ bot.on('message', message => {
             message.author.createDM().then(channel => {
                 channel.send('WORLD!');
             }).catch(console.error);
-        bot.channels.get('441785759804948482').send("Commande §hello utilisée par : " + message.author.username);
+        bot.channels.get('442630188136660992').send("Commande §hello utilisée par : " + message.author.username);
         }
       
         else if(spliteMessage[0] === ":help") {
@@ -94,7 +94,7 @@ bot.on('message', message => {
             message.author.createDM().then(channel => {
                 channel.send('**⇩ Liste des commandes ⇩: \n \n __Bientôt__**');
             }).catch(console.error);
-        bot.channels.get('441785759804948482').send("Commande :help utilisée par : " + message.author.username);
+        bot.channels.get('442630188136660992').send("Commande :help utilisée par : " + message.author.username);
         }             
     }    
 });
@@ -158,7 +158,7 @@ bot.on('message', message => {
 });
 
 bot.on("guildMemberAdd", member => {
-    member.guild.channels.find("name", "ℬ𝓲𝒆𝓷𝓿𝒆𝓷𝓾𝒆").send(`Hey ${member}, bienvenue sur **UltraGaming** :tada::hugging: ! \n Tu es le **${membercount}ème** sur le serveur :tada:`)
+    member.guild.channels.find("name", "ℬ𝓲𝒆𝓷𝓿𝒆𝓷𝓾𝒆").send(`Hey ${member}, bienvenue sur **UltraGaming** :tada::hugging: ! \n Tu es le **${memberCount}ème** sur le serveur :tada:`)
 });
 
 bot.on("guildMemberRemove", member => {
