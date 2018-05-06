@@ -158,7 +158,7 @@ bot.on('message', message => {
 });
 
 bot.on("guildMemberAdd", member => {
-    member.guild.channels.find("name", "ℬ𝓲𝒆𝓷𝓿𝒆𝓷𝓾𝒆").send(`Hey ${member}, bienvenue sur **UltraGaming** :tada::hugging: ! \n Tu es le **${memberCount}ème** sur le serveur :tada:`)
+    member.guild.channels.find("name", "ℬ𝓲𝒆𝓷𝓿𝒆𝓷𝓾𝒆").send(`Hey ${member}, bienvenue sur **UltraGaming** :tada::hugging: ! \n Tu es le **${server.member_count}ème** sur le serveur :tada:`)
 });
 
 bot.on("guildMemberRemove", member => {
