@@ -123,7 +123,10 @@ client.on('message', message => {
 
     if (message.content === prefix + "help") {
         var embed = new Discord.RichEmbed()
-        .addField("u!help", "Liste des commandes")        
+        .setTitle("Voici la liste des commandes")
+        .addField("Commandes basiques", "u!help")
+        .setDescription("u!avatar")
+        .setDescription("u!ping")
         .addField("u!avatar", "Affiche ton avatar")
         .addField("Crée par :", ":art: ๖̶̶̶ζ͜MrPăsțeł :art:#0091")
         .addField("Tu as rejoint le :", message.member.joinedAt)
