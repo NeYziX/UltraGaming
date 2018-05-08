@@ -3,10 +3,10 @@ const bot = new Discord.Client();
 
 var prefix = ("u!");
 
-client.on("ready", () => {
+bot.on("ready", () => {
   
   console.log(`le bot a démarré avec,  ${client.users.size} personnes, dans ${client.guilds.size} serveurs `); 
-  client.user.setActivity(`u!help | ${client.guilds.size} serveurs`)
+  bot.user.setActivity(`u!help | ${client.guilds.size} serveurs`)
 });
 
 bot.login(process.env.BOT_TOKEN);
