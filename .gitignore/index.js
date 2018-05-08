@@ -118,7 +118,7 @@ client.on('message', message => {
         var embed = new Discord.RichEmbed()
         .addField("Nom du serveur", message.guild.name)        
         .addField("Crée le :", message.guild.name)
-        .addField("Crée par :", message.guild.owner)
+        .addField("Crée par :", message.guild.ownerID)
         .addField("Tu as rejoint le :", message.member.joinedAt)
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
         .setFooter("© UltraGaming | Tous droits réservés.")
