@@ -82,7 +82,7 @@ client.on('message', message => {
             message.author.createDM().then(channel => {
                 channel.send('WORLD!');
             }).catch(console.error);
-        bot.channels.get('442630188136660992').send("Commande u!hello utilisée par : " + message.author.username);
+        client.channels.get('442630188136660992').send("Commande u!hello utilisée par : " + message.author.username);
         }
       
         else if(spliteMessage[0] === "u!hlp") {
@@ -90,7 +90,7 @@ client.on('message', message => {
             message.author.createDM().then(channel => {
                 channel.send('**⇩ Liste des commandes ⇩: \n \n __Bientôt__**');
             }).catch(console.error);
-        bot.channels.get('442630188136660992').send("Commande u!help utilisée par : " + message.author.username);
+        client.channels.get('442630188136660992').send("Commande u!help utilisée par : " + message.author.username);
         }             
     }    
 });
@@ -118,7 +118,7 @@ client.on('message', message => {
         var embed = new Discord.RichEmbed()
         .addField("Nom du serveur", message.guild.name)        
         .addField("Crée le :", message.guild.name)
-        .addField("Crée par :", message.guild.ownerID)
+        .addField("Crée par :", "Bientôt")
         .addField("Tu as rejoint le :", message.member.joinedAt)
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
         .setFooter("© UltraGaming | Tous droits réservés.")
