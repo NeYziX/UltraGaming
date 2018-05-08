@@ -4,11 +4,8 @@ const bot = new Discord.Client();
 var prefix = ("u!");
 
 bot.on('ready', function() {
-  bot.user.setGame("u!help | ultragaming.xyz");
+  bot.user.setActivity(`u!help | ${client.guilds.size} serveurs`);
   console.log("le bot a démarré"); 
-  bot.channels.get('442630188136660992').send("**=======================**");
-  bot.channels.get('442630188136660992').send("| LE BOT VIENT DE SE LANCER |");
-  bot.channels.get('442630188136660992').send("**=======================**");
 });
 
 bot.login(process.env.BOT_TOKEN);
