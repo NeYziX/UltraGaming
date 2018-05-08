@@ -107,7 +107,7 @@ client.on('message', message => {
 
     if (message.content === prefix + "avatar") {
         var embed = new Discord.RichEmbed()
-        .addTitle("Voici ton avatar")        
+        .setTitle("Voici ton avatar")        
         .setColor("0x81DAF5")
         .setThumbnail(message.author.avatarURL)
     message.channel.sendEmbed(embed)
