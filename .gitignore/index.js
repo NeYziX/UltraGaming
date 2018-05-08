@@ -41,11 +41,6 @@ client.on("message", function(message) {
     var args = message.content.substring(prefix.length).split(" ");
 
     switch (args[0].toLowerCase()) {
-        case "roll":
-            var roll = Math.floor(Math.random() * args[1]) +1;
-            if (!roll) return message.reply("Entre un numéro")
-            message.channel.send("Je choisi le numéro " + roll + " !");
-            break;
         case "8ball":
         let args = message.content.split(" ").slice(1);
         let tte = args.join(" ")
@@ -73,7 +68,8 @@ client.on("message", function(message) {
                         message.channel.bulkDelete(list);
                 }, function(err){message.channel.send("Erreur")})}
             break;        
-
+});
+  
 client.on('message', message => {
     if(message.content[0] === prefix) {
         let spliteMessage = message.content.split(' ');
@@ -194,11 +190,11 @@ client.on('message', message => {
 });
 
 client.on("guildMemberAdd", member => {
-    member.guild.channels.find("name", "вιeɴveɴυe").send(`Hey ${member}, bienvenue sur **UltraGaming** :tada::hugging: !`)
+    member.guild.channels.find("name", "bienvenue").send(`Hey ${member}, bienvenue sur **UltraGaming** :tada::hugging: !`)
 });
 
 client.on("guildMemberRemove", member => {
-    member.guild.channels.find("name", "вιeɴveɴυe").send(`${member} a quitté **UltraGaming**. Nous sommes ravis de t'avoir accueillis :cry:.`)
+    member.guild.channels.find("name", "bienvenue").send(`${member} a quitté **UltraGaming**. Nous sommes ravis de t'avoir accueillis :cry:.`)
 });
 
 client.on("guildMemberAdd", member => {
