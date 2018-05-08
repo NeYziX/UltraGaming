@@ -121,18 +121,28 @@ client.on('message', message => {
 
 client.on('message', message => {
 
+    if (message.content === prefix + "site") {
+        var embed = new Discord.RichEmbed()
+        .addField("Notre site", "Bientôt")        
+        .setColor("0x81DAF5")
+    message.channel.sendEmbed(embed)
+    }
+});
+
+client.on('message', message => {
+
     if (message.content === prefix + "help") {
         var embed = new Discord.RichEmbed()
         .setTitle("Voici la liste des commandes")
-        .addField("Commandes basiques", "u!help")
-        .setDescription("u!avatar")
-        .setDescription("u!ping")
+        .addField("u!help", "Affiche la liste des commandes")
         .addField("u!avatar", "Affiche ton avatar")
-        .addField("Crée par :", ":art: ๖̶̶̶ζ͜MrPăsțeł :art:#0091")
-        .addField("Tu as rejoint le :", message.member.joinedAt)
+        .addField("u!info", "Affiche les informations du discord")
+        .addField("u!ping", "Affiche la latence entre le bot et le serveur")
+        .addField("u!site", "Affiche notre site")
+        .addField("u!clear", "Staff » Clear 50 messages")
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
         .setFooter("© NeYziX | Tous droits réservés.")
-        .setColor("0x81DAF5")
+        .setColor("0x2E9AFE")
         .setThumbnail(message.author.avatarURL)
     message.channel.sendEmbed(embed)
     }
