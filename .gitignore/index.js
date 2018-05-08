@@ -79,20 +79,20 @@ client.on("message", function(message) {
 client.on('message', message => {
     if(message.content[0] === prefix) {
         let spliteMessage = message.content.split(' ');
-        if(spliteMessage[0] === ":hello") {
+        if(spliteMessage[0] === "u!hello") {
             message.channel.send("world!");
             message.author.createDM().then(channel => {
                 channel.send('WORLD!');
             }).catch(console.error);
-        bot.channels.get('442630188136660992').send("Commande §hello utilisée par : " + message.author.username);
+        bot.channels.get('442630188136660992').send("Commande u!hello utilisée par : " + message.author.username);
         }
       
-        else if(spliteMessage[0] === ":help") {
+        else if(spliteMessage[0] === "u!help") {
             message.channel.send("Liste des commandes envoyées en privée.");
             message.author.createDM().then(channel => {
                 channel.send('**⇩ Liste des commandes ⇩: \n \n __Bientôt__**');
             }).catch(console.error);
-        bot.channels.get('442630188136660992').send("Commande :help utilisée par : " + message.author.username);
+        bot.channels.get('442630188136660992').send("Commande u!help utilisée par : " + message.author.username);
         }             
     }    
 });
