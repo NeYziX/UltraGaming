@@ -114,7 +114,7 @@ client.on('message', message => {
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
         .setFooter("©NeYziX | Tous droits réservés.")
         .setColor("0x81DAF5")
-        .setThumbnail(message.author.avatarURL)
+        .setThumbnail(guild.iconURL)
     message.channel.sendEmbed(embed)
     }
 });
