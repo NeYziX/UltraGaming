@@ -69,27 +69,6 @@ client.on("message", function(message) {
                 }, function(err){message.channel.send("Erreur")})}
             break;        
 });
-  
-client.on('message', message => {
-    if(message.content[0] === prefix) {
-        let spliteMessage = message.content.split(' ');
-        if(spliteMessage[0] === "u!hello") {
-            message.channel.send("world!");
-            message.author.createDM().then(channel => {
-                channel.send('WORLD!');
-            }).catch(console.error);
-        client.channels.get('442630188136660992').send("Commande u!hello utilisée par : " + message.author.username);
-        }
-      
-        else if(spliteMessage[0] === "u!hlp") {
-            message.channel.send("Liste des commandes envoyées en privée.");
-            message.author.createDM().then(channel => {
-                channel.send('**⇩ Liste des commandes ⇩: \n \n __Bientôt__**');
-            }).catch(console.error);
-        client.channels.get('442630188136660992').send("Commande u!help utilisée par : " + message.author.username);
-        }             
-    }    
-});
 
 client.on('message', message => {
     if (message.content === prefix + "ping"){
@@ -149,42 +128,6 @@ client.on('message', message => {
         .setFooter("© UltraGaming | Tous droits réservés.")
         .setColor("0x2E9AFE")
         .setThumbnail(message.author.avatarURL)
-    message.channel.sendEmbed(embed)
-    }
-});
-
-client.on('message', message => {
-
-    if (message.content === prefix + "créateur") {
-        var embed = new Discord.RichEmbed()
-        .setDescription("Pour visiter le site du créateur :")
-        .addField("Lien :", "http://xrainbow.000webhostapp.com")
-        .setFooter("© UltraGaming | Tous droits réservés.")
-        .setColor("0x81DAF5")
-    message.channel.sendEmbed(embed)
-    }
-});
-
-client.on('message', message => {
-
-    if (message.content === prefix + "sm") {
-        var embed = new Discord.RichEmbed()
-        .setDescription("Réseaux sociaux de PastelWorld :")
-        .addField("Instagram :", "https://www.instagram.com/pastelworld_officiel/") 
-        .setFooter("© UltraGaming | Tous droits réservés.")
-        .setColor("0x81DAF5")
-    message.channel.sendEmbed(embed)
-    }
-});
-
-client.on('message', message => {
-
-    if (message.content === prefix + "socialmedia") {
-        var embed = new Discord.RichEmbed()
-        .setDescription("Réseaux sociaux de PastelWorld :")
-        .addField("Instagram :", "https://www.instagram.com/pastelworld_officiel/")
-        .setFooter("© UltraGaming | Tous droits réservés.")
-        .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
 });
