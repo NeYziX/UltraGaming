@@ -1,17 +1,17 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const bot = new Discord.Client();
 
 var prefix = ("u!");
 
-client.on("ready", () => {
+bot.on("ready", () => {
   
   console.log("Salut"); 
-  client.user.setActivity(`u!help | ${client.guilds.size} serveurs`)
+  bot.user.setActivity(`u!help | ${bot.guilds.size} serveurs`)
 });
 
-client.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content.startsWith(prefix + "avatar")) {
 
 message.channel.send({embed: {
@@ -33,8 +33,8 @@ message.channel.send({embed: {
 }
 });
 
-client.on("message", function(message) {
-    if (message.author.equals(client.user)) return;
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
   
     if (!message.content.startsWith(prefix)) return;
   
@@ -67,16 +67,17 @@ client.on("message", function(message) {
                     .then(function(list){
                         message.channel.bulkDelete(list);
                 }, function(err){message.channel.send("Erreur")})}
-            break;        
+            break; 
+    }
 });
 
-client.on('message', message => {
+bot.on('message', message => {
     if (message.content === prefix + "ping"){
         message.channel.sendMessage("Temps de latence avec le serveur : " + `${message.createdTimestamp - Date.now()}` + "MS");  
     }
 });      
 
-client.on('message', message => {
+bot.on('message', message => {
 
     if (message.content === prefix + "avatar") {
         var embed = new Discord.RichEmbed()
@@ -87,7 +88,7 @@ client.on('message', message => {
     }
 });
 
-client.on('message', message => {
+bot.on('message', message => {
 
     if (message.content === prefix + "info") {
         var embed = new Discord.RichEmbed()
@@ -103,7 +104,7 @@ client.on('message', message => {
     }
 });
 
-client.on('message', message => {
+bot.on('message', message => {
 
     if (message.content === prefix + "site") {
         var embed = new Discord.RichEmbed()
@@ -113,7 +114,7 @@ client.on('message', message => {
     }
 });
 
-client.on('message', message => {
+bot.on('message', message => {
 
     if (message.content === prefix + "help") {
         var embed = new Discord.RichEmbed()
@@ -132,15 +133,15 @@ client.on('message', message => {
     }
 });
 
-client.on("guildMemberAdd", member => {
+bot.on("guildMemberAdd", member => {
     member.guild.channels.find("name", "bienvenue").send(`Hey ${member}, bienvenue sur **UltraGaming** :tada::hugging: !`)
 });
 
-client.on("guildMemberRemove", member => {
+bot.on("guildMemberRemove", member => {
     member.guild.channels.find("name", "bienvenue").send(`${member} a quitté **UltraGaming**. Nous sommes ravis de t'avoir accueillis :cry:.`)
 });
 
-client.on("guildMemberAdd", member => {
+bot.on("guildMemberAdd", member => {
     var role = member.guild.roles.find('name', '★━𝓖𝓪𝓶𝒆𝓾𝓻𝓼━★');
     member.addRole(role)
 })
