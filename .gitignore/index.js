@@ -116,12 +116,12 @@ client.on('message', message => {
 
     if (message.content === prefix + "info") {
         var embed = new Discord.RichEmbed()
-        .addField("Liste des commandes", message.guild.name)        
-        .addField("Crée le :", "19/01/18 20:09:34")
-        .addField("Crée par :", guild.)
+        .addField("Nom du serveur", message.guild.name)        
+        .addField("Crée le :", message.guild.name)
+        .addField("Crée par :", message.guild.owner)
         .addField("Tu as rejoint le :", message.member.joinedAt)
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
-        .setFooter("©NeYziX | Tous droits réservés.")
+        .setFooter("© UltraGaming | Tous droits réservés.")
         .setColor("0x00FF00")
         .setThumbnail(message.author.avatarURL)
     message.channel.sendEmbed(embed)
@@ -150,7 +150,7 @@ client.on('message', message => {
         .addField("u!site", "Affiche notre site")
         .addField("u!clear", "Staff » Clear 50 messages")
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
-        .setFooter("© NeYziX | Tous droits réservés.")
+        .setFooter("© UltraGaming | Tous droits réservés.")
         .setColor("0x2E9AFE")
         .setThumbnail(message.author.avatarURL)
     message.channel.sendEmbed(embed)
@@ -163,7 +163,7 @@ client.on('message', message => {
         var embed = new Discord.RichEmbed()
         .setDescription("Pour visiter le site du créateur :")
         .addField("Lien :", "http://xrainbow.000webhostapp.com")
-        .setFooter("©NeYziX | Tous droits réservés.")
+        .setFooter("© UltraGaming | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
@@ -175,7 +175,7 @@ client.on('message', message => {
         var embed = new Discord.RichEmbed()
         .setDescription("Réseaux sociaux de PastelWorld :")
         .addField("Instagram :", "https://www.instagram.com/pastelworld_officiel/") 
-        .setFooter("©NeYziX | Tous droits réservés.")
+        .setFooter("© UltraGaming | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
@@ -187,7 +187,7 @@ client.on('message', message => {
         var embed = new Discord.RichEmbed()
         .setDescription("Réseaux sociaux de PastelWorld :")
         .addField("Instagram :", "https://www.instagram.com/pastelworld_officiel/")
-        .setFooter("©NeYziX | Tous droits réservés.")
+        .setFooter("© UltraGaming | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
