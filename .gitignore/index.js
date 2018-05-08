@@ -123,14 +123,14 @@ client.on('message', message => {
 
     if (message.content === prefix + "help") {
         var embed = new Discord.RichEmbed()
-        .setDescription("Information de Discord :")
-        .addField("Nom du Discord :", message.guild.name)        
-        .addField("Crée le :", "19/01/18 20:09:34")
+        .addField("u!help", "Liste des commandes")        
+        .addField("u!avatar", "Affiche ton avatar")
         .addField("Crée par :", ":art: ๖̶̶̶ζ͜MrPăsțeł :art:#0091")
         .addField("Tu as rejoint le :", message.member.joinedAt)
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
-        .setFooter("©NeYziX | Tous droits réservés.")
+        .setFooter("© NeYziX | Tous droits réservés.")
         .setColor("0x81DAF5")
+        .setThumbnail(message.author.avatarURL)
     message.channel.sendEmbed(embed)
     }
 });
