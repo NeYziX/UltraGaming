@@ -217,11 +217,11 @@ client.on('message', message => {
 });
 
 client.on("guildMemberAdd", member => {
-    member.guild.channels.find("name", "ℬ𝓲𝒆𝓷𝓿𝒆𝓷𝓾𝒆").send(`Hey ${member}, bienvenue sur **UltraGaming** :tada::hugging: !`)
+    member.guild.channels.find("name", "вιeɴveɴυe").send(`Hey ${member}, bienvenue sur **UltraGaming** :tada::hugging: !`)
 });
 
 client.on("guildMemberRemove", member => {
-    member.guild.channels.find("name", "ℬ𝓲𝒆𝓷𝓿𝒆𝓷𝓾𝒆").send(`${member} a quitté **UltraGaming**. Nous sommes ravis de t'avoir accueillis :cry:.`)
+    member.guild.channels.find("name", "вιeɴveɴυe").send(`${member} a quitté **UltraGaming**. Nous sommes ravis de t'avoir accueillis :cry:.`)
 });
 
 client.on("guildMemberAdd", member => {
