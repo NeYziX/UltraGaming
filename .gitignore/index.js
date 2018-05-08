@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 
 var prefix = ("u!");
 
-bot.on('ready', function() {
+client.on("ready", () => {
   bot.user.setActivity(`u!help | ${client.guilds.size} serveurs`);
   console.log("le bot a démarré"); 
 });
