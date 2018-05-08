@@ -108,7 +108,7 @@ client.on('message', message => {
     if (message.content === prefix + "avatar") {
         var embed = new Discord.RichEmbed()
         .setTitle("Voici ton avatar")        
-        .setColor("0x81DAF5")
+        .setColor("0xFF0000")
         .setThumbnail(message.author.avatarURL)
     message.channel.sendEmbed(embed)
     }
@@ -124,7 +124,7 @@ client.on('message', message => {
         .addField("Tu as rejoint le :", message.member.joinedAt)
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
         .setFooter("©NeYziX | Tous droits réservés.")
-        .setColor("0x2E9AFE")
+        .setColor("0x00FF00")
         .setThumbnail(message.author.avatarURL)
     message.channel.sendEmbed(embed)
     }
@@ -135,7 +135,7 @@ client.on('message', message => {
     if (message.content === prefix + "site") {
         var embed = new Discord.RichEmbed()
         .addField("Notre site", "Bientôt")        
-        .setColor("0x2E9AFE")
+        .setColor("0x0000FF")
     message.channel.sendEmbed(embed)
     }
 });
