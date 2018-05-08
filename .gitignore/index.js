@@ -85,6 +85,7 @@ client.on("message", function(message) {
       .addField("Date de création de l'utilisateur", userCreateDate[1] + ' ' + userCreateDate[2] + ' ' + userCreateDate[3])
       .addField("L'utilisateur a rejoint le serveur le", message.member.joinedAt)
       .setThumbnail(message.author.avatarURL)
+      message.channel.sendEmbed(stats_embed)
       break;                                                             
     }});
 
