@@ -87,7 +87,7 @@ client.on('message', message => {
         bot.channels.get('442630188136660992').send("Commande u!hello utilisée par : " + message.author.username);
         }
       
-        else if(spliteMessage[0] === "u!help") {
+        else if(spliteMessage[0] === "u!hlp") {
             message.channel.send("Liste des commandes envoyées en privée.");
             message.author.createDM().then(channel => {
                 channel.send('**⇩ Liste des commandes ⇩: \n \n __Bientôt__**');
@@ -106,6 +106,22 @@ client.on('message', message => {
 client.on('message', message => {
 
     if (message.content === prefix + "info") {
+        var embed = new Discord.RichEmbed()
+        .addField("Liste des commandes", message.guild.name)        
+        .addField("Crée le :", "19/01/18 20:09:34")
+        .addField("Crée par :", ":art: ๖̶̶̶ζ͜MrPăsțeł :art:#0091")
+        .addField("Tu as rejoint le :", message.member.joinedAt)
+        .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
+        .setFooter("©NeYziX | Tous droits réservés.")
+        .setColor("0x81DAF5")
+        .setThumbnail(message.author.avatarURL)
+    message.channel.sendEmbed(embed)
+    }
+});
+
+client.on('message', message => {
+
+    if (message.content === prefix + "help") {
         var embed = new Discord.RichEmbed()
         .setDescription("Information de Discord :")
         .addField("Nom du Discord :", message.guild.name)        
