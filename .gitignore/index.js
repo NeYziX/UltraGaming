@@ -118,7 +118,7 @@ client.on('message', message => {
         var embed = new Discord.RichEmbed()
         .addField("Liste des commandes", message.guild.name)        
         .addField("Crée le :", "19/01/18 20:09:34")
-        .addField("Crée par :", ":art: ๖̶̶̶ζ͜MrPăsțeł :art:#0091")
+        .addField("Crée par :", guild.)
         .addField("Tu as rejoint le :", message.member.joinedAt)
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
         .setFooter("©NeYziX | Tous droits réservés.")
