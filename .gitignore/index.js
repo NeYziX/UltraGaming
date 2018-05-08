@@ -73,7 +73,19 @@ client.on("message", function(message) {
                         message.channel.bulkDelete(list);
                 }, function(err){message.channel.send("Erreur")})}
             break;
-        
+      case "stats":
+      var userCreateDate = message.author.createdAt.toString().split(* *);
+      var msgauthor = message.autho.id;
+      
+      var stats_embed = new Discord.RichEmbed()
+      
+      .setColor("#FCDC12")
+      .setTitle(`Statistiques de l'utilisateur : ${message.author.username}`)
+      .addField("ID de l'utilisateur :id:", msgauthor, true)
+      .addField("Date de création de l'utilisateur", userCreateDate[1] + ' ' + userCreateDate[2] + ' ' + userCreateDate[3])
+      .addField("L'utilisateur a rejoint le serveur le", message.member.joinedAt)
+      .setThumbnail(message.author.avatarURL)
+      break;                                                             
     }});
 
 client.on('message', message => {
