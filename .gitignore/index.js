@@ -60,18 +60,7 @@ bot.on("message", function(message) {
             .addField("Question :thinking:", tte)
             .addField("Réponse :kissing_heart:", reponse)
             message.channel.sendEmbed(bembed)
-            break;
-            case "annonce":
-            let args = message.content.split(" ").slice(1);
-            let tte = args.join(" ")
-            if (!tte){
-        
-            var gembed = new Discord.RichEmbed()
-            .setDescription(":8ball: 8ball")
-            .addField("Nouvelle annonce !", tte)
-            message.channel.sendEmbed(gembed)
-            message.delete();
-            break;
+            break;           
             case "clear":
             if (message.member.hasPermission("MANAGE_MESSAGES")){
                 message.channel.fetchMessages()
