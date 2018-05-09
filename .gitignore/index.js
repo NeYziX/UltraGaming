@@ -66,10 +66,10 @@ bot.on("message", function(message) {
             let tte = args.join(" ")
             if (!tte){
         
-            var bembed = new Discord.RichEmbed()
+            var gembed = new Discord.RichEmbed()
             .setDescription(":8ball: 8ball")
             .addField("Nouvelle annonce !", tte)
-            message.channel.sendEmbed(bembed)
+            message.channel.sendEmbed(gembed)
             message.delete();
             break;
             case "clear":
