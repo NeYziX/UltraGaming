@@ -153,22 +153,11 @@ bot.on('message', message => {
 });
 
 bot.on("guildMemberAdd", member => {
-    member.guild.channels.find("name", "bienvenue").send(`Hey ${member}, bienvenue sur **UltraGaming** :tada::hugging: !`)
-});
-
-bot.on('message', message => {
-
-    if (message.content === prefix + "avatar") {
-        var embed = new Discord.RichEmbed()
-        .setTitle("Voici ton avatar")        
-        .setColor("0xFF0000")
-        .setThumbnail(message.author.avatarURL)
-    message.channel.sendEmbed(embed)
-    }
+    member.guild.channels.find("name", "bienvenue").send(`Hey ${member}, bienvenue sur le serveur :tada::hugging: !`)
 });
 
 bot.on("guildMemberRemove", member => {
-    member.guild.channels.find("name", "bienvenue").send(`${member} a quitté **${server.name}**. Nous sommes ravis de t'avoir accueillis :cry:.`)
+    member.guild.channels.find("name", "bienvenue").send(`${member} a quitté le serveur. Nous sommes ravis de t'avoir accueillis :cry:.`)
 });
 
 bot.on("guildMemberAdd", member => {
