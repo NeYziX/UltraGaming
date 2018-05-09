@@ -78,7 +78,9 @@ bot.on("message", function(message) {
             var embed = new Discord.RichEmbed()
             .setColor("0x88CC14")
             .setTitle("UltraGlobal Message")
-            .addField("Pse
+            .addField("Pseudo de l'utilisateur", message.author.username + "#" + message.author.discriminator)
+            .addField("Discord", message.guild.name, true)
+            .addField("Message", x03
             
     }
 });
