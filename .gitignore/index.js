@@ -116,7 +116,7 @@ bot.on('message', message => {
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
         .setFooter("© UltraGaming | Tous droits réservés.")
         .setColor("0x00FF00")
-        .setThumbnail(message.author.avatarURL)
+        .setTimestamp()
     message.channel.sendEmbed(embed)
     }
 });
@@ -145,7 +145,7 @@ bot.on('message', message => {
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
         .setFooter("© UltraGaming | Tous droits réservés.")
         .setColor("0x2E9AFE")
-        .setThumbnail(message.author.avatarURL)
+        .setTimestamp()
     message.channel.sendEmbed(embed)
     }
 });
