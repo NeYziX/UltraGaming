@@ -110,7 +110,7 @@ bot.on('message', message => {
     if (message.content === prefix + "info") {
         var embed = new Discord.RichEmbed()
         .addField("Nom du serveur", message.guild.name)        
-        .addField("Crée le :", message.guild.name)
+        .addField("Crée le :", message.guild.createdAt)
         .addField("Crée par :", message.guild.owner)
         .addField("Tu as rejoint le :", message.member.joinedAt)
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
