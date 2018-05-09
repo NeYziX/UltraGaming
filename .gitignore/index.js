@@ -61,6 +61,22 @@ bot.on("message", function(message) {
             .addField("Réponse :kissing_heart:", reponse)
             message.channel.sendEmbed(bembed)
             break;
+            case "roll":
+            var replys = [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+            ];
+        
+            let reponse = (replys[Math.floor(Math.random() * replys.length)])
+            var bembed = new Discord.RichEmbed()
+            .setDescription(":game_die: Roulette")
+            .addField("Je choisis le numéro", reponse)
+            message.channel.sendEmbed(bembed)
+            break;        
             case "clear":
             if (message.member.hasPermission("MANAGE_MESSAGES")){
                 message.channel.fetchMessages()
