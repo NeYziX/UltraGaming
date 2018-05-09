@@ -61,7 +61,7 @@ bot.on("message", function(message) {
             .addField("Réponse :kissing_heart:", reponse)
             message.channel.sendEmbed(bembed)
             break;
-            case "8ball":
+            case "annonce":
             let args = message.content.split(" ").slice(1);
             let tte = args.join(" ")
             if (!tte){
@@ -70,6 +70,7 @@ bot.on("message", function(message) {
             .setDescription(":8ball: 8ball")
             .addField("Nouvelle annonce !", tte)
             message.channel.sendEmbed(bembed)
+            message.delete();
             break;
             case "clear":
             if (message.member.hasPermission("MANAGE_MESSAGES")){
