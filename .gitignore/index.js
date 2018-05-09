@@ -78,10 +78,14 @@ bot.on("message", function(message) {
             var embed = new Discord.RichEmbed()
             .setColor("0x88CC14")
             .setTitle("UltraGlobal Message")
-            .addField("Pseudo de l'utilisateur", message.author.username + "#" + message.author.discriminator)
+            .addField("Pseudo de l'utilisateur", message.author.username + "#" + message.author.discriminator, true)
             .addField("Discord", message.guild.name, true)
-            .addField("Message", x03
-            
+            .addField("Message", xo03)
+            .setFooter("© UltraGaming | Tous droits réservés.")
+            .setThumbnail(message.author.avatarURL)
+            .setTimestamp()
+        bot.channels.findAll('name', 'u-chat').map(channel => channel.send(embedglobal))
+          break;
     }
 });
 
