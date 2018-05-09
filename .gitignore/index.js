@@ -113,6 +113,22 @@ bot.on('message', message => {
 
 bot.on('message', message => {
 
+    if (message.content === prefix + "color") {
+        var embed = new Discord.RichEmbed()
+        .addField("Nom du serveur", message.guild.name)        
+        .addField("Crée le :", message.guild.createdAt)
+        .addField("Crée par :", message.guild.owner)
+        .addField("Tu as rejoint le :", message.member.joinedAt)
+        .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
+        .setFooter("© UltraGaming | Tous droits réservés.")
+        .setColor("0x00FF00")
+        .setTimestamp()
+    message.channel.sendEmbed(embed)
+    }
+});
+
+bot.on('message', message => {
+
     if (message.content === prefix + "site") {
         var embed = new Discord.RichEmbed()
         .addField("Notre site", "Bientôt")        
@@ -123,17 +139,15 @@ bot.on('message', message => {
 
 bot.on('message', message => {
 
-    if (message.content === prefix + "help") {
+    if (message.content === prefix + "color") {
         var embed = new Discord.RichEmbed()
-        .setTitle("Voici la liste des commandes")
-        .addField("u!help", "Affiche la liste des commandes")
-        .addField("u!avatar", "Affiche ton avatar")
-        .addField("u!info", "Affiche les informations du discord")
-        .addField("u!ping", "Affiche la latence entre le bot et le serveur")
-        .addField("u!site", "Affiche notre site")
-        .addField("u!chat", "Discute avec des personnes qui ne sont pas sur le même serveur que vous")
-        .addField("u!8ball", "Pose une question au bot | Réponse en Oui ou Non")
-        .addField("u!clear", "Staff » Clear 50 messages")
+        .setTitle(":small_blue_diamond: Voici comment écrire en couleur")
+        .setDescription("↵ Signifie un retour à la ligne")
+        .addField("` 00 Message [Enveloppé de base] `", "` 00 Message [Enveloppé de base] `")
+        .addField("```Markdown ↵ # 01 Message [Markdown] ↵```", "```Markdown ↵ # 01 Message [Markdown] ↵```")
+        .addField("```Css ↵ # 02 Message [Css] ↵```", "```Css ↵ # 02 Message [Css] ↵```")
+        .addField("```Js ↵ # 03 Message [Js] ↵ ]```", "```Js ↵ # 03 Message [Js] ↵ ]```")
+        .addField("```Diff ↵ - 04 Message [Diff] ↵```", "```Diff ↵ - 04 Message [Diff] ↵```")
         .setFooter("© UltraGaming | Tous droits réservés.")
         .setColor("0x2E9AFE")
         .setTimestamp()
