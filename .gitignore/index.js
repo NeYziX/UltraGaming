@@ -111,25 +111,20 @@ bot.on('message', message => {
     }
 });
 
+
 bot.on('message', message => {
 
-    if (message.content === prefix + "help") {
+    if (message.content === prefix + "site") {
         var embed = new Discord.RichEmbed()
-        .addField("Nom du serveur", message.guild.name)        
-        .addField("Crée le :", message.guild.createdAt)
-        .addField("Crée par :", message.guild.owner)
-        .addField("Tu as rejoint le :", message.member.joinedAt)
-        .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
-        .setFooter("© UltraGaming | Tous droits réservés.")
-        .setColor("0x00FF00")
-        .setTimestamp()
+        .addField("Notre site", "Bientôt")        
+        .setColor("0x0000FF")
     message.channel.sendEmbed(embed)
     }
 });
 
 bot.on('message', message => {
 
-    if (message.content === prefix + "site") {
+    if (message.content === prefix + "text") {
         var embed = new Discord.RichEmbed()
         .addField("Notre site", "Bientôt")        
         .setColor("0x0000FF")
