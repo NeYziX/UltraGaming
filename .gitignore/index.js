@@ -137,24 +137,6 @@ bot.on('message', message => {
     }
 });
 
-bot.on('message', message => {
-
-    if (message.content === prefix + "color") {
-        var embed = new Discord.RichEmbed()
-        .setTitle(":small_blue_diamond: Voici comment écrire en couleur")
-        .setDescription("↵ Signifie un retour à la ligne")
-        .addField("` 00 Message [Enveloppé de base] `", "` 00 Message [Enveloppé de base] `")
-        .addField("```Markdown ↵ # 01 Message [Markdown] ↵```", "```Markdown ↵ # 01 Message [Markdown] ↵```")
-        .addField("```Css ↵ # 02 Message [Css] ↵```", "```Css ↵ # 02 Message [Css] ↵```")
-        .addField("```Js ↵ # 03 Message [Js] ↵ ]```", "```Js ↵ # 03 Message [Js] ↵ ]```")
-        .addField("```Diff ↵ - 04 Message [Diff] ↵```", "```Diff ↵ - 04 Message [Diff] ↵```")
-        .setFooter("© UltraGaming | Tous droits réservés.")
-        .setColor("0x2E9AFE")
-        .setTimestamp()
-    message.channel.sendEmbed(embed)
-    }
-});
-
 bot.on("guildMemberAdd", member => {
     member.guild.channels.find("name", "bienvenue").send(`Hey ${member}, bienvenue sur le serveur :tada::hugging: !`)
 });
