@@ -126,7 +126,7 @@ bot.on('message', message => {
 
     if (message.content === prefix + "text") {
         var embed = new Discord.RichEmbed()
-        .addField("Écriture custom :pencil2:", "https://cdn.discordapp.com/attachments/442630188136660992/443866855959035926/unknown.png")        
+        .addField("Écriture custom :pencil2:", "__Souligné__ \n __Souligné__")        
         .setColor("0x0000FF")
     message.channel.sendEmbed(embed)
     }
