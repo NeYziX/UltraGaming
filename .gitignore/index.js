@@ -116,7 +116,7 @@ bot.on('message', message => {
 
     if (message.content === prefix + "site") {
         var embed = new Discord.RichEmbed()
-        .addField("Notre site", "Bientôt")        
+        .addField("Notre site", "http://ultragam1ng.000webhostapp.com")        
         .setColor("0x0000FF")
     message.channel.sendEmbed(embed)
     }
