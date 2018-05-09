@@ -113,7 +113,7 @@ bot.on('message', message => {
 
 bot.on('message', message => {
 
-    if (message.content === prefix + "color") {
+    if (message.content === prefix + "help") {
         var embed = new Discord.RichEmbed()
         .addField("Nom du serveur", message.guild.name)        
         .addField("Crée le :", message.guild.createdAt)
