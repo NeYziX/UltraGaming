@@ -97,17 +97,6 @@ bot.on('message', message => {
 
 bot.on('message', message => {
 
-    if (message.content === prefix + "avatar") {
-        var embed = new Discord.RichEmbed()
-        .setTitle("Voici ton avatar")        
-        .setColor("0xFF0000")
-        .setThumbnail(message.author.avatarURL)
-    message.channel.sendEmbed(embed)
-    }
-});
-
-bot.on('message', message => {
-
     if (message.content === prefix + "info") {
         var embed = new Discord.RichEmbed()
         .addField("Nom du serveur", message.guild.name)        
