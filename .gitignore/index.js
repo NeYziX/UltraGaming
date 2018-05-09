@@ -82,10 +82,9 @@ bot.on("message", function(message) {
             .addField("Discord", message.guild.name, true)
             .addField("Message", xo03)
             .setFooter("© UltraGaming | Tous droits réservés.")
-            .setThumbnail(message.author.avatarURL)
             .setTimestamp()
-        bot.channels.findAll('name', 'u-chat').map(channel => channel.send(embed))
-          break;
+          bot.channels.findAll('name', 'u-chat').map(channel => channel.send(embed))
+            break;
     }
 });
 
