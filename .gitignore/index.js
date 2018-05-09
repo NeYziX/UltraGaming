@@ -62,6 +62,7 @@ bot.on("message", function(message) {
             message.channel.sendEmbed(bembed)
             break;
             case "roll":
+            let args = message.content.split(" ").slice(1);
             var replys = [
                 "1",
                 "2",
