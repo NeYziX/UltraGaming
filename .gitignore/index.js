@@ -84,7 +84,7 @@ bot.on("message", function(message) {
             .setFooter("© UltraGaming | Tous droits réservés.")
             .setThumbnail(message.author.avatarURL)
             .setTimestamp()
-        bot.channels.findAll('name', 'u-chat').map(channel => channel.send(embedglobal))
+        bot.channels.findAll('name', 'u-chat').map(channel => channel.send(embed))
           break;
     }
 });
