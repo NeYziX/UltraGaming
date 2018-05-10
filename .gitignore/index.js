@@ -108,7 +108,8 @@ bot.on('message', message => {
             message.react("❌")
         }).catch(function() {
         })
-        }}});     
+    }
+});
 
 bot.on('message', message => {
 
