@@ -133,6 +133,27 @@ bot.on('message', message => {
     }
 });
 
+bot.on('message', message => {
+
+    if (message.content === prefix + "help") {
+        var embed = new Discord.RichEmbed()
+        .setTitle("Voici la liste des commandes")
+        .addField("u!help", "Affiche la liste des commandes")
+        .addField("u!avatar", "Affiche ton avatar")
+        .addField("u!info", "Affiche les informations du discord")
+        .addField("u!ping", "Affiche la latence entre le bot et le serveur")
+        .addField("u!site", "Site de NeYziX")
+        .addField("u!chat", "Chat relié avec tous les serveurs où je suis")
+        .addField("u!8ball", "Pose une question au bot | Réponse en Oui ou Non")
+        .addField("u!text", "Affiche comment avoir une écriture custom")
+        .addField("u!clear", "Staff > Clear 50 messages")
+        .setFooter("© UltraGaming | Tous droits réservés.")
+        .setColor("0x2E9AFE")
+        .setTimestamp()
+    message.channel.sendEmbed(embed)
+    }
+});
+
 bot.on("guildMemberAdd", member => {
     member.guild.channels.find("name", "bienvenue").send(`Hey ${member}, bienvenue sur le serveur :tada::hugging: !`)
 });
