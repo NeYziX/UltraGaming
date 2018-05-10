@@ -111,7 +111,6 @@ bot.on('message', message => {
     }
 });
 
-
 bot.on('message', message => {
 
     if (message.content === prefix + "site") {
