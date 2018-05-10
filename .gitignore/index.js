@@ -127,7 +127,15 @@ bot.on('message', message => {
     if (message.content === prefix + "text") {
         var embed = new Discord.RichEmbed()
         .setTitle("Écriture custom :pencil2:")
-        .addField("__Souligné__", `__Souligné__`)
+        .setDescription("» signifie à la fin et au début du mot")
+        .addField("*Italique*", "*»Italique")
+        .addField("**Gras**", "**»Gras")
+        .addField("***Italique gras***", "***»Italique gras")
+        .addField("~~Barré~~", "~~»Barré")
+        .addField("__Souligné__", "__»Souligné")
+        .addField("__*Italique souligné*__", "__*»Italique souligné")
+        .addField("__**Gras souligné**__", "__**»Gras souligné")
+        .addField("__***Italique gras souligné***__", "__***»Italique gras souligné")
         .setColor("0x0000FF")
     message.channel.sendEmbed(embed)
     }
