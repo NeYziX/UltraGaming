@@ -136,7 +136,9 @@ bot.on('message', message => {
         .addField("__*Italique souligné*__", "__*»Italique souligné")
         .addField("__**Gras souligné**__", "__**»Gras souligné")
         .addField("__***Italique gras souligné***__", "__***»Italique gras souligné")
+        .setFooter("© UltraGaming | Tous droits réservés.")
         .setColor("0x0000FF")
+        .setTimestamp()
     message.channel.sendEmbed(embed)
     }
 });
