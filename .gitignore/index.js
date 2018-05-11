@@ -61,10 +61,10 @@ bot.on("message", function(message) {
             .addField("Réponse :kissing_heart:", reponse)
             message.channel.sendEmbed(bembed)
             break;
-        case "roll":
-        let args = message.content.split(" ").slice(1);
-        let ftt = args.join(" ")
-        if (!ftt){
+            case "roll":
+            let args = message.content.split(" ").slice(1);
+            let ftt = args.join(" ")
+            if (!ftt){
             return message.reply("Merci de choisir un nombre :game_die:")};
         
             var replyss = [
