@@ -88,7 +88,7 @@ bot.on("message", function(message) {
             break;
             case "test":
             let args = message.content.split(" ").slice(1);
-            let tte = args.join(" ")
+            let ttte = args.join(" ")
             if (!tte){
             return message.reply("Merci de poser une question :8ball:")};
         
@@ -98,11 +98,11 @@ bot.on("message", function(message) {
                 "0x0000FF"
             ];
         
-            let reponse = (replys[Math.floor(Math.random() * replys.length)])
+            let reponses = (replys[Math.floor(Math.random() * replys.length)])
             var bembed = new Discord.RichEmbed()
             .setDescription(":8ball: 8ball")
-            .addField("Question :thinking:", tte)
-            .addField("Réponse :kissing_heart:", reponse)
+            .addField("Question :thinking:", ttte)
+            .addField("Réponse :kissing_heart:", reponses)
             .setColor(reponse)
             message.channel.sendEmbed(bembed)
             break;
