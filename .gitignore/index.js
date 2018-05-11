@@ -86,6 +86,23 @@ bot.on("message", function(message) {
           bot.channels.findAll('name', 'u-chat').map(channel => channel.send(embed))
           message.delete();
             break;
+            case "report":
+            let xoargs = message.content.split(" ").slice(1);
+            let xo03 = xoargs.join(" ")
+            var xo02 = message.guild.channels.find('name', 'reports');
+            if(!xo02) return message.reply("Le channel **reports** est introuvable")
+            if(message.channel.name !== 'reports') return message.reply("Commande à effectuer dans **reports**")
+            if(!xo03) return message.reply("Merci d'écrire un message qui sera envoyé à tous les serveurs où je suis.")
+            var embed = new Discord.RichEmbed()
+            .setColor("0x88CC14")
+            .setTitle("UltraReport")
+            .addField("Pseudo de l'utilisateur", message.author.username + "#" + message.author.discriminator, true)
+            .addField("Message", xo03)
+            .setFooter("© UltraGaming | Tous droits réservés.")
+            .setTimestamp()
+          bot.channels.find('name', 'reports').map(channel => channel.send(embed))
+          message.delete();
+            break;
     }
 });
 
