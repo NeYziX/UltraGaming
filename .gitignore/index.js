@@ -60,7 +60,29 @@ bot.on("message", function(message) {
             .addField("Question :thinking:", tte)
             .addField("Réponse :kissing_heart:", reponse)
             message.channel.sendEmbed(bembed)
-            break;           
+            break;
+        case "roll":
+        let args = message.content.split(" ").slice(1);
+        let tte = args.join(" ")
+        if (!tte){
+            return message.reply("Merci de choisir un nombre :game_die:")};
+        
+            var replys = [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+            ];
+        
+            let reponse = (replys[Math.floor(Math.random() * replys.length)])
+            var bembed = new Discord.RichEmbed()
+            .setDescription(":game_die: Roulette")
+            .addField("Nombre choisit :game_die: ", tte)
+            .addField("Nombre gagnant :slot_machine: ", reponse)
+            message.channel.sendEmbed(bembed)
+            break;
             case "clear":
             if (message.member.hasPermission("MANAGE_MESSAGES")){
                 message.channel.fetchMessages()
