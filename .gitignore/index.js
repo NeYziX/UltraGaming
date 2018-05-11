@@ -103,7 +103,7 @@ bot.on("message", function(message) {
             .setDescription(":8ball: 8ball")
             .addField("Question :thinking:", ttte)
             .addField("Réponse :kissing_heart:", reponses)
-            .setColor(reponse)
+            .setColor(reponses)
             message.channel.sendEmbed(bembed)
             break;
     }
