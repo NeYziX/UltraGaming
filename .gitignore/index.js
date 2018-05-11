@@ -86,26 +86,6 @@ bot.on("message", function(message) {
           bot.channels.findAll('name', 'u-chat').map(channel => channel.send(embed))
           message.delete();
             break;
-            case "test":
-            let args = message.content.split(" ").slice(1);
-            let ttte = args.join(" ")
-            if (!tte){
-            return message.reply("Merci de poser une question :8ball:")};
-        
-            var replys = [
-                "0xFF0000",
-                "0x00FF00",
-                "0x0000FF"
-            ];
-        
-            let reponses = (replys[Math.floor(Math.random() * replys.length)])
-            var bembed = new Discord.RichEmbed()
-            .setDescription(":8ball: 8ball")
-            .addField("Question :thinking:", ttte)
-            .addField("Réponse :kissing_heart:", reponses)
-            .setColor(reponses)
-            message.channel.sendEmbed(bembed)
-            break;
     }
 });
 
