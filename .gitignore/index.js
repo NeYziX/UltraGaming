@@ -63,11 +63,11 @@ bot.on("message", function(message) {
             break;
         case "roll":
         let args = message.content.split(" ").slice(1);
-        let tte = args.join(" ")
-        if (!tte){
+        let ftt = args.join(" ")
+        if (!ftt){
             return message.reply("Merci de choisir un nombre :game_die:")};
         
-            var replys = [
+            var replyss = [
                 "1",
                 "2",
                 "3",
@@ -76,11 +76,11 @@ bot.on("message", function(message) {
                 "6"
             ];
         
-            let reponse = (replys[Math.floor(Math.random() * replys.length)])
+            let reponses = (replyss[Math.floor(Math.random() * replys.length)])
             var bembed = new Discord.RichEmbed()
             .setDescription(":game_die: Roulette")
             .addField("Nombre choisit :game_die: ", tte)
-            .addField("Nombre gagnant :slot_machine: ", reponse)
+            .addField("Nombre gagnant :slot_machine: ", reponses)
             message.channel.sendEmbed(bembed)
             break;
             case "clear":
