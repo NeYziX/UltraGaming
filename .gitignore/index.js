@@ -86,10 +86,10 @@ bot.on("message", function(message) {
           bot.channels.findAll('name', 'u-chat').map(channel => channel.send(embed))
           message.delete();
             break;
-        case "test":
-        let args = message.content.split(" ").slice(1);
-        let tte = args.join(" ")
-        if (!tte){
+            case "test":
+            let args = message.content.split(" ").slice(1);
+            let tte = args.join(" ")
+            if (!tte){
             return message.reply("Merci de poser une question :8ball:")};
         
             var replys = [
