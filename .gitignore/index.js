@@ -65,16 +65,16 @@ bot.on("message", function(message) {
             let args = message.content.split(" ").slice(1);
             let ftt = args.join(" ")
             if (!ftt){
-            return message.reply("Merci de choisir un nombre :game_die:")};
+                return message.reply("Merci de choisir un nombre :game_die:")};
         
-            var replyss = [
-                "1",
-                "2",
-                "3",
-                "4",
-                "5",
-                "6"
-            ];
+                var replyss = [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6"
+                ];
         
             let reponses = (replyss[Math.floor(Math.random() * replys.length)])
             var bembed = new Discord.RichEmbed()
