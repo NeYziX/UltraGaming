@@ -76,7 +76,7 @@ bot.on("message", function(message) {
                     "6"
                 ];
         
-            let reponses = (replyss[Math.floor(Math.random() * replys.length)])
+            let reponses = (replyss[Math.floor(Math.random() * replyss.length)])
             var bembed = new Discord.RichEmbed()
             .setDescription(":game_die: Roulette")
             .addField("Nombre choisit :game_die: ", tte)
