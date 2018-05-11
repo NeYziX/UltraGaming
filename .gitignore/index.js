@@ -96,6 +96,12 @@ bot.on('message', message => {
 });
 
 bot.on('message', message => {
+    if (message.content === "Tu t'ennuis mon fils ?"){
+        message.channel.sendMessage("Oui papa ! Je peux aller à la piscine ?");  
+    }
+});
+
+bot.on('message', message => {
 
     if (message.content === prefix + "info") {
         var embed = new Discord.RichEmbed()
