@@ -100,7 +100,7 @@ bot.on("message", function(message) {
             .addField("Message", s03)
             .setFooter("© UltraGaming | Tous droits réservés.")
             .setTimestamp()
-          member.guild.channels.find('name', 'reports').send(channel => channel.send(embed))
+          bot.channels.find('name', 'reports').send(channel => channel.send(embed))
           message.delete();
             break;
     }
