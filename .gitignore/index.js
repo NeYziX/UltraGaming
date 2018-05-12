@@ -119,6 +119,17 @@ bot.on('message', message => {
 
 bot.on('message', message => {
 
+    if (message.content === prefix + "b") {
+        var embed = new Discord.RichEmbed()
+        .setTitle("Bienvenue ! Je t'invite à prendre connaissance du #informations-🚩  .\nNous espérons que tu passeras un bon moment ici !")        
+        .setColor("0x00FF00")
+        .setTimestamp()
+    message.channel.sendEmbed(embed)
+    }
+});
+
+bot.on('message', message => {
+
     if (message.content === prefix + "site") {
         var embed = new Discord.RichEmbed()
         .addField("Notre site", "http://ultragam1ng.000webhostapp.com")        
