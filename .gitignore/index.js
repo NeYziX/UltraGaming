@@ -113,6 +113,7 @@ bot.on('message', message => {
         .setFooter("© UltraGaming | Tous droits réservés.")
         .setColor("0x00FF00")
         .setTimestamp()
+        .setThumbnail(message.guild.iconURL)
     message.channel.sendEmbed(embed)
     }
 });
