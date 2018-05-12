@@ -121,7 +121,7 @@ bot.on('message', message => {
 
     if (message.content === prefix + "b") {
         var embed = new Discord.RichEmbed()
-        .setTitle("Bienvenue ! Je t'invite à prendre connaissance du #informations-🚩  .\nNous espérons que tu passeras un bon moment ici !")        
+        .addField("Bienvenue ! Je t'invite à prendre connaissance du #informations-🚩  .", "Nous espérons que tu passeras un bon moment ici !")        
         .setColor("0x00FF00")
         .setTimestamp()
     message.channel.sendEmbed(embed)
