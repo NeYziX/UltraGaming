@@ -42,6 +42,10 @@ bot.on("message", function(message) {
 
     switch (args[0].toLowerCase()) {
         case "8ball":
+            let args = message.content.split(" ").slice(1);
+            let tte = args.join(" ")
+            if (!tte){
+        
         
             var replys = [
                 "Oui",
@@ -58,10 +62,6 @@ bot.on("message", function(message) {
             message.channel.sendEmbed(bembed)
             break;
         case "test":
-        let argsz = message.content.split(" ").slice(1);
-        let ttde = argsz.join(" ")
-        if (!ttde){
-            return message.reply("Merci de poser une question :8ball:")};
         
             var replys = [
                 "0x0000FF",
@@ -73,7 +73,7 @@ bot.on("message", function(message) {
             var bembed = new Discord.RichEmbed()
             .setDescription(":8ball: 8ball")
             .addField("Question :thinking:", "Test")
-            .addField("Réponse :kissing_heart:", ttde)
+            .addField("Réponse :kissing_heart:", "Test")
             .setColor(reponsess)
             message.channel.sendEmbed(bembed)
             break;
