@@ -62,7 +62,11 @@ bot.on("message", function(message) {
             message.channel.sendEmbed(bembed)
             break;
         case "test":
-        
+            let argsd = message.content.split(" ").slice(1);
+            let ttde = argsd.join(" ")
+            if (!ttde){  
+
+
             var replys = [
                 "0x0000FF",
                 "0x00FF00",
