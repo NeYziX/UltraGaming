@@ -42,10 +42,6 @@ bot.on("message", function(message) {
 
     switch (args[0].toLowerCase()) {
         case "8ball":
-        let args = message.content.split(" ").slice(1);
-        let tte = args.join(" ")
-        if (!tte){
-            return message.reply("Merci de poser une question :8ball:")};
         
             var replys = [
                 "Oui",
