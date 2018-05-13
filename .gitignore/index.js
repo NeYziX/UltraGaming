@@ -68,6 +68,17 @@ bot.on("message", function(message) {
                         message.channel.bulkDelete(list);
                 }, function(err){message.channel.send("Erreur")})}
             break;
+            case "purge":
+            if (message.member.hasPermission("MANAGE_MESSAGES")){
+                message.channel.fetchMessages()
+                    .then(function(list){
+                        message.channel.bulkDelete(list);
+                        message.channel.bulkDelete(list);
+                        message.channel.bulkDelete(list);
+                        message.channel.bulkDelete(list);
+                        message.channel.bulkDelete(list);
+                }, function(err){message.channel.send("Erreur")})}
+            break;
             case "chat":
             let xoargs = message.content.split(" ").slice(1);
             let xo03 = xoargs.join(" ")
