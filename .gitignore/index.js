@@ -88,17 +88,6 @@ bot.on("message", function(message) {
                         message.channel.bulkDelete(list);
                 }, function(err){message.channel.send("Erreur")})}
             break;
-            case "purge":
-            if (message.member.hasPermission("MANAGE_MESSAGES")){
-                message.channel.fetchMessages()
-                    .then(function(list){
-                        message.channel.bulkDelete(list);
-                        message.channel.bulkDelete(list);
-                        message.channel.bulkDelete(list);
-                        message.channel.bulkDelete(list);
-                        message.channel.bulkDelete(list);
-                }, function(err){message.channel.send("Erreur")})}
-            break;
             case "chat":
             let xoargs = message.content.split(" ").slice(1);
             let xo03 = xoargs.join(" ")
@@ -123,12 +112,6 @@ bot.on("message", function(message) {
 bot.on('message', message => {
     if (message.content === prefix + "ping"){
         message.channel.sendMessage("Temps de latence avec le serveur : " + `${message.createdTimestamp - Date.now()}` + "MS");  
-    }
-});
-
-bot.on('message', message => {
-    if (message.content === "Tu t'ennuis mon fils ?"){
-        message.channel.sendMessage("Oui papa ! Je peux aller à la piscine ?");  
     }
 });
 
