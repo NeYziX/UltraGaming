@@ -61,26 +61,6 @@ bot.on("message", function(message) {
             .addField("Réponse :kissing_heart:", reponse)
             message.channel.sendEmbed(bembed)
             break;
-        case "test":
-            let argsd = message.content.split(" ").slice(1);
-            let ttde = argsd.join(" ")
-            if (!ttde){  
-
-
-            var replys = [
-                "0x0000FF",
-                "0x00FF00",
-                "0xFF0000"
-            ];
-        
-            let reponsess = (replys[Math.floor(Math.random() * replys.length)])
-            var bembed = new Discord.RichEmbed()
-            .setDescription(":8ball: 8ball")
-            .addField("Question :thinking:", "Test")
-            .addField("Réponse :kissing_heart:", "Test")
-            .setColor(reponsess)
-            message.channel.sendEmbed(bembed)
-            break;
             case "clear":
             if (message.member.hasPermission("MANAGE_MESSAGES")){
                 message.channel.fetchMessages()
