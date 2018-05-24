@@ -163,6 +163,18 @@ bot.on('message', message => {
     message.channel.sendEmbed(embed)
     }
 });
+  
+bot.on("guildMemberRemove", member => {
+    var embed = new Discord.RichEmbed()
+            .setColor("0x88CC14")
+            .setTitle("UltraGlobal Message")
+            .addField("Pseudo de l'utilisateur", message.author.username + "#" + message.author.discriminator, true)
+            .addField("Discord", message.guild.name, true)
+            .addField("Message", xo03)
+            .setFooter("© UltraGaming | Tous droits réservés.")
+            .setTimestamp() 
+    member.guild.channels.find("name", "départ").sendEmbed(embed)
+});
 
 bot.on("guildMemberAdd", member => {
     member.guild.channels.find("name", "bienvenue").send(`Hey ${member}, bienvenue sur le serveur :tada::hugging: !`)
